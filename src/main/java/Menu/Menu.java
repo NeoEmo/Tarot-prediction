@@ -26,14 +26,15 @@ public class Menu {
         while (!isValid) {
             switch (userAnswer) {
                 case 1 -> {
+                    scanner.close();
                     Oracle.Oracle();
                     isValid = true;
-                    scanner.close();
+
                 }
                 case 2 -> {
+                    scanner.close();
                     newOracle.newOracle();
                     isValid = true;
-                    scanner.close();
                 }
                 default -> {
                     System.out.println(text.get(5));
@@ -41,7 +42,6 @@ public class Menu {
                     userAnswer = scanner.nextInt();
                 }
             }
-            scanner.close();
         }
     }
 }

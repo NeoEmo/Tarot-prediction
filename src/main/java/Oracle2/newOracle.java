@@ -24,6 +24,7 @@ public class newOracle {
             while (!isValid) {
                 switch (userAnswer) {
                     case "major" -> {
+                        scanner.close();
                         System.out.println(text.get(3));
                         Thread.sleep(1000);
                         System.out.println(text.get(4));
@@ -34,9 +35,9 @@ public class newOracle {
                         System.out.println(major.getMajorCard());
                         System.out.println(major.getAsciiArt());
                         System.out.println(major.getMajorPrediction());
-                        scanner.close();
                     }
                     case "all" -> {
+                        scanner.close();
                         System.out.println(text.get(3));
                         Thread.sleep(1000);
                         System.out.println(text.get(4));
@@ -47,7 +48,6 @@ public class newOracle {
                         System.out.println(all.getAllCard());
                         System.out.println(all.getAsciiArt());
                         System.out.println(all.getAllPrediction());
-                        scanner.close();
                     }
                     default -> {
                         System.out.println(text.get(6));
