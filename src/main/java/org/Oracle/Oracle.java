@@ -31,6 +31,7 @@ public class Oracle {
                     System.out.println(answer[0]);
                     System.out.println(answer[1]);
                     System.out.println(answer[2]);
+                    scanner.close();
                 }
                 case "All", "ALL", "all" -> {
                     System.out.println("Карты услышали тебя...");
@@ -47,6 +48,7 @@ public class Oracle {
                     System.out.println(predictionAscii[randomise]);
                     System.out.println(answer[0]);
                     System.out.println(answer[1]);
+                    scanner.close();
                 }
                 default -> {
                     System.out.println("Сосредоточься, попробуй снова...");
@@ -56,6 +58,7 @@ public class Oracle {
                     userAnswer = scanner.nextLine();
                 }
             }
+            scanner.close();
         }
 
     }

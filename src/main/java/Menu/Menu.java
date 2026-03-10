@@ -28,10 +28,12 @@ public class Menu {
                 case 1 -> {
                     Oracle.Oracle();
                     isValid = true;
+                    scanner.close();
                 }
                 case 2 -> {
                     newOracle.newOracle();
                     isValid = true;
+                    scanner.close();
                 }
                 default -> {
                     System.out.println(text.get(5));
@@ -39,6 +41,7 @@ public class Menu {
                     userAnswer = scanner.nextInt();
                 }
             }
+            scanner.close();
         }
     }
 }
