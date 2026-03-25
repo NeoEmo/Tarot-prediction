@@ -4,13 +4,12 @@ import java.util.Scanner;
 
 
 public class Oracle {
-    public static void Oracle() throws InterruptedException {
+    public void start(Scanner scanner) throws InterruptedException {
         System.out.println("И вновь ты пришёл...");
         Thread.sleep(1000);
         System.out.println("Хочешь на старших погадать или на всех?(Major/All)");
         Thread.sleep(1000);
         System.out.print("Введите текст: ");
-        Scanner scanner = new Scanner(System.in);
         String userAnswer = scanner.nextLine();
         boolean isValid = false;
         while (!isValid) {

@@ -1,6 +1,6 @@
 package Menu;
 
-import Oracle2.newOracle;
+import Oracle2.NewOracle;
 import org.Oracle.Oracle;
 
 import java.io.IOException;
@@ -22,18 +22,19 @@ public class Menu {
         System.out.print(text.get(4) + " ");
         Scanner scanner = new Scanner(System.in);
         int userAnswer = scanner.nextInt();
+        scanner.nextLine();
         boolean isValid = false;
         while (!isValid) {
             switch (userAnswer) {
                 case 1 -> {
-                    scanner.close();
-                    Oracle.Oracle();
+                    Oracle oracle = new Oracle();
+                    oracle.start(scanner);
                     isValid = true;
 
                 }
                 case 2 -> {
-                    scanner.close();
-                    newOracle.newOracle();
+                    NewOracle newOracle = new NewOracle();
+                    newOracle.start(scanner);
                     isValid = true;
                 }
                 default -> {
